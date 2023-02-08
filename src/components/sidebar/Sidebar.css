@@ -20,6 +20,7 @@
 .logo>img {
     width: 3rem;
     height: 3rem;
+    border-radius: 100%;
 }
 
 .logo>span>span {
@@ -100,6 +101,10 @@
     }
     .logo{
       display: flex;
+      
+    }
+    .logo>img{
+        border-radius: 100%;
     }
     .menu .menuItem:last-child {
       position: relative;

@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
-import Logo from '../../imgs/logo.jpeg'
-import './Sidebar.css'
-
-import { SidebarData } from '../../Data/Data'
-import {motion} from 'framer-motion'
-import { UilSignOutAlt, UilBars } from "@iconscout/react-unicons";
-
+import React, { useState } from "react";
+import "./Sidebar.css";
+import Logo from "../../imgs/logo.jpeg";
+import { UilSignOutAlt } from "@iconscout/react-unicons";
+import { SidebarData } from "../../Data/Data";
+import { UilBars } from "@iconscout/react-unicons";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 const Sidebar = () => {
 
     const[selected, setSelected] = useState(0)
     const [expanded, setExpaned] = useState(true)
-
+    const navigate = useNavigate()
 
     const sidebarVariants = {
         true: {
@@ -26,7 +26,7 @@ const Sidebar = () => {
 
   return (
     <>
-    <div className="bars" style={expanded?{left: '60%'}:{left: '5%'}} onClick={()=>setExpaned(!expanded)}>
+    <div className="bars" style={expanded?{left: '5%'}:{left: '60%'}} onClick={()=>setExpaned(!expanded)}>
         <UilBars />
       </div>
     <motion.div className="Sidebar"
@@ -37,7 +37,7 @@ const Sidebar = () => {
         <div className="logo">
             <img src={Logo} alt="" />
             <span>
-                Sh<span>o</span>ps
+                Ad<span>m</span>in
             </span>
         </div>
 
@@ -57,8 +57,9 @@ const Sidebar = () => {
                 )
             })}
 
-            <div className="menuItem">
+            <div className="menuItem" onClick={()=>navigate("/login")}>
                 <UilSignOutAlt/>
+                <span>Log Out</span>
             </div>
         </div>
     </motion.div>

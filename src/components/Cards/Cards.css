@@ -1,15 +1,12 @@
 .Cards {
     display: flex;
     gap: 10px;
-}
-
-.parentContainer {
+  }
+  .parentContainer{
     width: 100%;
-    
-}
-
-
-@media screen and (max-width: 1200px) {
+  }
+  
+  @media screen and (max-width: 1200px) {
     .Cards{
       flex-direction: column;
     }
@@ -17,19 +14,10 @@
       height: 9rem;
     }
   }
-
-@media screen and (max-width: 768px)
-{
-  .Cards{
-    width: 90%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-    .ExpandedCard {
-      top: 8rem;
-      height: 50%;
-      left: 25px;
-      width: 80%;
+  
+  @media screen and (max-width: 768px)
+  {
+    .Cards{
+      width: 90%;
     }
   }

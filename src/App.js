@@ -1,15 +1,16 @@
 import './App.css'
-import MainDash from './components/MainDash/MainDash';
-import Sidebar from './components/sidebar/Sidebar';
-import RightSide from './components/RightSide/RightSide';
+import {Route,Routes} from 'react-router-dom';
+import LogIn from './components/LogIn/LogIn';
+import HomePage from './components/HomePage/HomePage';
+import Register from './components/Register/Register';
 function App() {
   return (
-    <div className="App">
-        <div className="AppGlass">
-          <Sidebar/>
-       <MainDash/>
-       <RightSide/>
-        </div>
+    <div>
+      <Routes>
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="/register" element={<Register/>}/>
+        <Route path="/login" element={<LogIn/>}/>
+      </Routes>
     </div>
   );
 }
