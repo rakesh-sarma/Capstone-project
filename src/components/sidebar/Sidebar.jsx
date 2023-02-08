@@ -26,7 +26,7 @@ const Sidebar = () => {
 
   return (
     <>
-    <div className="bars" style={expanded?{left: '5%'}:{left: '60%'}} onClick={()=>setExpaned(!expanded)}>
+    <div className="bars" style={expanded?{left: '60%'}:{left: '5%'}} onClick={()=>setExpaned(!expanded)}>
         <UilBars />
       </div>
     <motion.div className="Sidebar"

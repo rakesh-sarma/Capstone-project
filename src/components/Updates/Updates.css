@@ -1,5 +1,5 @@
 .Updates {
-    width: 85%;
+    width: 95%;
     background: white;
     border-radius: 0.7rem;
     padding: 1rem;
@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     font-size: 13px;
+    margin-bottom: 20px;
 }
 
 .update {
@@ -21,4 +22,10 @@
 
 .noti>div>span:nth-of-type(1) {
     font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+    .Updates{
+        text-align: center;
+        margin-left: 20px;
+    }
 }

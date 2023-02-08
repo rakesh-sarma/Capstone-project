@@ -1,6 +1,6 @@
 import React from "react";
 import Chart from "react-apexcharts";
-
+import "./CustomerReview.css"
 const CustomerReview = () => {
   const data = {
     series: [
@@ -57,6 +57,7 @@ const CustomerReview = () => {
 
   return (
     <div className="CustomerReview">
+       <span className="heading">Customer Review</span> 
       <Chart options={data.options} series={data.series} type="area" />
     </div>
   );

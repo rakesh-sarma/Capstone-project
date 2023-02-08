@@ -7,6 +7,7 @@
     position: relative;
     cursor: pointer;
     padding: 1rem;
+    margin-bottom: 95px;
 }
 
 .CompactCard:hover {
@@ -114,4 +115,8 @@
       left: 25px;
       width: 80%;
     }
+    .CompactCard{
+        margin-left: 55px;
+    }
+
   }

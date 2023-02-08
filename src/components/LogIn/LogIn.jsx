@@ -1,7 +1,21 @@
 import React from "react";
-import {useNavigate} from "react-router-dom"
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 const LogIn = () => {
-  const navigate= useNavigate()
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = async () => {
+    if (username === "admin@admin.com" && password === "admin123") {
+      navigate("/");
+      return;
+    }
+    else{
+      alert("You enterd wrong credential")
+    }
+  };
+
   return (
     <div>
       <section className="vh-100">
@@ -17,7 +31,7 @@ const LogIn = () => {
               </div>
 
               <div className="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
-                <form style={{ width: "23rem" }}>
+                <form style={{ width: "23rem" }} onSubmit={handleSubmit}>
                   <h3
                     className="fw-normal mb-3 pb-3"
                     style={{ "letter-spacing": "1px" }}
@@ -27,8 +41,12 @@ const LogIn = () => {
 
                   <div className="form-outline mb-4">
                     <input
+                      id="email"
+                      label="Email Address"
+                      name="email"
+                      value={username}
+                      onChange={(e) => setUsername(e.target.value)}
                       type="email"
-                      id="form2Example18"
                       className="form-control form-control-lg"
                     />
                     <label className="form-label" for="form2Example18">
@@ -38,8 +56,12 @@ const LogIn = () => {
 
                   <div className="form-outline mb-4">
                     <input
+                      name="password"
+                      label="Password"
                       type="password"
-                      id="form2Example28"
+                      id="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
                       className="form-control form-control-lg"
                     />
                     <label className="form-label" for="form2Example28">
@@ -50,7 +72,7 @@ const LogIn = () => {
                   <div className="pt-1 mb-4">
                     <button
                       className="btn btn-info btn-lg btn-block"
-                      type="button"
+                      type="submit"
                     >
                       Login
                     </button>
@@ -63,7 +85,11 @@ const LogIn = () => {
                   </p>
                   <p>
                     Don't have an account?{" "}
-                    <a href="#!" onClick={()=> navigate("/register")} className="link-info">
+                    <a
+                      href="#!"
+                      onClick={() => navigate("/register")}
+                      className="link-info"
+                    >
                       Register here
                     </a>
                   </p>
