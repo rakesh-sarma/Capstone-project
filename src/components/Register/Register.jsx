@@ -57,7 +57,7 @@ const Register = () => {
 
                   <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                     <button type="button" className="btn btn-primary btn-lg mx-4">Register</button>
-                    <button type="button" className="btn btn-primary btn-lg" onClick={()=> navigate("/login")}>Log in</button>
+                    <button type="button" className="btn btn-primary btn-lg" onClick={()=> navigate("/")}>Log in</button>
                   </div>
 
                 </form>

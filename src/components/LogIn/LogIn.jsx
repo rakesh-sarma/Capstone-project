@@ -8,7 +8,7 @@ const LogIn = () => {
 
   const handleSubmit = async () => {
     if (username === "admin@admin.com" && password === "admin123") {
-      navigate("/");
+      navigate("/home");
       return;
     }
     else{
@@ -98,9 +98,9 @@ const LogIn = () => {
             </div>
             <div className="col-sm-6 px-0 d-none d-sm-block">
               <img
-                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img3.webp"
+                src="https://icon-library.com/images/log-on-icon/log-on-icon-23.jpg"
                 alt=""
-                className="w-100 vh-100"
+                className="w-100 h-100"
                 style={{ "object-fit": "cover", "object-position": "left" }}
               />
             </div>
