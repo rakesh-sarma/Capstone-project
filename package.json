@@ -1,6 +1,5 @@
 {
   "name": "capstone",
-  "homepage": "https://rakeshsarma033.github.io/Capstone-project", 
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,7 +13,6 @@
     "@testing-library/user-event": "^13.5.0",
     "apexcharts": "^3.37.0",
     "framer-motion": "^9.0.2",
-    "gh-pages": "^5.0.0",
     "material-react-table": "^1.6.6",
     "react": "^18.2.0",
     "react-apexcharts": "^1.4.0",
@@ -25,8 +23,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
